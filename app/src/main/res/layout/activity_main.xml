@@ -18,14 +18,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.todkars.shimmer.ShimmerRecyclerView
+    <Button
+        android:id="@+id/btnCAllApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="callApi"
+        android:layout_margin="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SearchQuery"/>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RvItems"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:shimmer_recycler_layout="@layout/item_layout"
         app:layout_constraintTop_toBottomOf="@id/SearchQuery"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
