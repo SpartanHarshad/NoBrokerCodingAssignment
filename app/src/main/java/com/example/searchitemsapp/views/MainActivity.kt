@@ -1,5 +1,6 @@
 package com.example.searchitemsapp.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -55,6 +56,10 @@ class MainActivity : AppCompatActivity(),OnClickListener {
     }
 
     override fun onItemClick(responseModel: ItemEntity) {
-        Toast.makeText(this,"{${responseModel.sub_Title}}",Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, ItemDetailActivity::class.java)
+        intent.putExtra("image", responseModel.item_Img)
+        intent.putExtra("title", responseModel.title)
+        intent.putExtra("subTitle", responseModel.sub_Title)
+        startActivity(intent)
     }
 }
